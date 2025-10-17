@@ -56,6 +56,14 @@ Automatically triggers notifications for “Interested” emails:
 - Color-coded category badges.  
 - Dedicated modal for AI-generated reply suggestions.
 
+The user interface is a single-page application built with vanilla JavaScript and Tailwind CSS...
+
+
+
+**Screenshot : AI Reply Suggestion Modal**
+![Screenshot of the modal showing the AI-generated reply draft](<img width="1467" height="837" alt="Screenshot 2025-10-17 at 12 52 49 PM" src="https://github.com/user-attachments/assets/08f1e6a0-5aff-456d-82ba-4260112ded50" />
+)
+
 ---
 
 ## Architecture
