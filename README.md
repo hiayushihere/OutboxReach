@@ -152,9 +152,15 @@ ollama pull nomic-embed-text
 
 
 ### Step 4: Run the Application
+
 *Start the backend API:*
-npm run dev #The backend runs on: http://localhost:3001
+
+npm run dev               #The backend runs on: http://localhost:3001
+
+
 *Open the frontend:*
+
+
 Open the index.html file in your browser to access the dashboard.
 
 
