@@ -1,6 +1,6 @@
-# ReachInbox AI Sales Dashboard
+ReachInbox AI Sales Dashboard
 
-### Overview
+Overview
 
 ReachInbox is a powerful, full-stack email management dashboard engineered for B2B sales professionals and job seekers. The core mission is noise reduction and lead prioritization.
 
@@ -8,7 +8,7 @@ The system automates IMAP email synchronization from multiple accounts, leverage
 
 This project is built using TypeScript/Node.js (Express) for the backend and a static HTML/JS/Tailwind frontend, emphasizing privacy by running all AI inference locally.
 
-### Core Features
+✨ Core Features
 
 ReachInbox delivers a robust set of features, each designed to streamline the sales and outreach workflow.
 
@@ -58,7 +58,7 @@ Color-coded category badges.
 
 A dedicated modal for viewing and copying AI-generated reply suggestions.
 
-## Architecture
+📐 Architecture
 
 ReachInbox uses a modular, layered architecture that separates concerns for ingestion, processing, persistence, and presentation.
 
@@ -72,7 +72,7 @@ API Layer (Node/Express): Handles all HTTP requests from the frontend, manages q
 
 Presentation Layer (Frontend): The static HTML/JS/Tailwind dashboard where users interact with the data and AI features.
 
-## Setup Instructions
+🚀 Setup Instructions
 
 This project is configured for local development using Docker for the data store and Ollama for local AI inference.
 
@@ -82,7 +82,7 @@ Install Node.js, Docker, and Ollama (download from ollama.com).
 
 Clone the repository and install dependencies:
 
-git clone [https://github.com/hiayushihere/OutboxReach](https://github.com/hiayushihere/OutboxReach)
+git clone https://github.com/hiayushihere/OutboxReach
 cd OutboxReach
 npm install
 
