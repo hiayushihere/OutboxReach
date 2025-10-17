@@ -145,8 +145,11 @@ docker run -d --name elasticsearch \
 *Start Ollama (AI Engine):*
 
 ollama serve
+
 ollama pull phi3
+
 ollama pull nomic-embed-text
+
 
 ### Step 4: Run the Application
 *Start the backend API:*
