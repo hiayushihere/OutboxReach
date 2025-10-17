@@ -59,6 +59,10 @@ Automatically triggers notifications for “Interested” emails:
 The user interface is a single-page application built with vanilla JavaScript and Tailwind CSS...
 
 
+**Screenshot : Dashboard**
+!<img width="1468" height="838" alt="Screenshot 2025-10-17 at 4 42 42 PM" src="https://github.com/user-attachments/assets/bd6d31bd-3b34-4cc9-98e9-52c8f4757257" />
+
+
 
 **Screenshot : AI Reply Suggestion Modal**
 !<img width="1467" height="837" alt="Screenshot 2025-10-17 at 12 52 49 PM" src="https://github.com/user-attachments/assets/08f1e6a0-5aff-456d-82ba-4260112ded50" />
