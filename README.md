@@ -97,57 +97,52 @@ Automatically triggers notifications for “Interested” emails:
 
 ---
 
-## Setup Instructions
 
-### Step 1: Install and Clone
-Install the following prerequisites:
-- Node.js  
-- Docker  
-- Ollama
+---
 
-```bash
+
+### Setup Instructions
+Step 1: Prerequisites
+Install the following before proceeding:
+Node.js
+Docker
+Ollama
+Clone the repository and install dependencies:
 git clone https://github.com/hiayushihere/OutboxReach
 cd OutboxReach
 npm install
 Step 2: Configure Environment Variables
-Create a .env file in the root directory and add:
+Create a .env file in the root directory and add the following:
 # IMAP Credentials (App Passwords recommended)
-EMAIL_1_USER=...
-EMAIL_1_PASSWORD=...
-EMAIL_2_USER=...
-EMAIL_2_PASSWORD=...
+EMAIL_1_USER=youremail1@example.com
+EMAIL_1_PASSWORD=yourapppassword1
+EMAIL_2_USER=youremail2@example.com
+EMAIL_2_PASSWORD=yourapppassword2
 
 # Backend Services
 ELASTIC_HOST=http://localhost:9200
 OLLAMA_HOST=http://localhost:11434
 
 # Notification Webhooks
-SLACK_WEBHOOK_URL=...
-GENERIC_WEBHOOK_URL=...
+SLACK_WEBHOOK_URL=https://hooks.slack.com/...
+GENERIC_WEBHOOK_URL=https://yourwebhook.url
 Step 3: Start Core Services
-Start Elasticsearch (Data Store)
+Start Elasticsearch (Data Store):
 docker run -d --name elasticsearch \
   -p 9200:9200 \
   -e "discovery.type=single-node" \
   -e "ES_JAVA_OPTS=-Xms512m -Xmx512m" \
   docker.elastic.co/elasticsearch/elasticsearch:7.17.0
-Start Ollama (AI Engine)
+Start Ollama (AI Engine):
 ollama serve
 ollama pull phi3
 ollama pull nomic-embed-text
 Step 4: Run the Application
 Start the backend API:
 npm run dev
-Server runs on: http://localhost:3001
-Start the frontend:
-Simply open the index.html file in your web browser.
+The backend runs on:
+http://localhost:3001
+Open the frontend:
+Open the index.html file in your browser to access the dashboard.
 
-Tech Stack
-Component	Technology
-Backend	Node.js (TypeScript, Express)
-Frontend	HTML, JavaScript, Tailwind CSS
-AI Models	Phi-3 (Categorization), Nomic Embed (RAG)
-Database/Search	Elasticsearch
-Notifications	Slack API, Webhooks
-AI Runtime	Ollama (Local inference)
-Containerization	Docker
+
