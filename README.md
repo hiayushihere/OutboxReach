@@ -110,52 +110,52 @@ Ollama
 
 
 Clone the repository and install dependencies:
-git clone https://github.com/hiayushihere/OutboxReach
-cd OutboxReach
-npm install
+`git clone https://github.com/hiayushihere/OutboxReach`
+`cd OutboxReach`
+`npm install`
 
 
 ### Step 2: Configure Environment Variables
 Create a .env file in the root directory and add the following:
 *IMAP Credentials (App Passwords recommended)*
-EMAIL_1_USER=youremail1@example.com
-EMAIL_1_PASSWORD=yourapppassword1
-EMAIL_2_USER=youremail2@example.com
-EMAIL_2_PASSWORD=yourapppassword2 
+`EMAIL_1_USER=youremail1@example.com`
+`EMAIL_1_PASSWORD=yourapppassword1`
+`EMAIL_2_USER=youremail2@example.com`
+`EMAIL_2_PASSWORD=yourapppassword2`
 
 *Backend Services*
-ELASTIC_HOST=http://localhost:9200
-OLLAMA_HOST=http://localhost:11434
+`ELASTIC_HOST=http://localhost:9200`
+`OLLAMA_HOST=http://localhost:11434`
 
 *Notification Webhooks*
-SLACK_WEBHOOK_URL=https://hooks.slack.com/...
-GENERIC_WEBHOOK_URL=https://yourwebhook.url
+`SLACK_WEBHOOK_URL=https://hooks.slack.com/...`
+`GENERIC_WEBHOOK_URL=https://yourwebhook.url`
 
 
 ### Step 3: Start Core Services
 *Start Elasticsearch (Data Store):*
 
-docker run -d --name elasticsearch \
-    -p 9200:9200 \
-    -e "xpack.security.enabled=false" \
-    -e "xpack.security.transport.ssl.enabled=false" \
-    -e "discovery.type=single-node" \
-    docker.elastic.co/elasticsearch/elasticsearch:8.10.0
+* `docker run -d --name elasticsearch \`
+    `-p 9200:9200 \`
+   ` -e "xpack.security.enabled=false" \`
+    `-e "xpack.security.transport.ssl.enabled=false" \`
+    `-e "discovery.type=single-node" \`
+    `docker.elastic.co/elasticsearch/elasticsearch:8.10.0`
   
 *Start Ollama (AI Engine):*
 
-ollama serve
+`ollama serve`
 
-ollama pull phi3
+`ollama pull phi3`
 
-ollama pull nomic-embed-text
+`ollama pull nomic-embed-text`
 
 
 ### Step 4: Run the Application
 
 *Start the backend API:*
 
-npm run dev               #The backend runs on: http://localhost:3001
+`npm run dev`               #The backend runs on: http://localhost:3001
 
 
 *Open the frontend:*
