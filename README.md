@@ -136,10 +136,11 @@ GENERIC_WEBHOOK_URL=https://yourwebhook.url
 *Start Elasticsearch (Data Store):*
 
 docker run -d --name elasticsearch \
-  -p 9200:9200 \
-  -e "discovery.type=single-node" \
-  -e "ES_JAVA_OPTS=-Xms512m -Xmx512m" \
-  docker.elastic.co/elasticsearch/elasticsearch:8.10.0
+    -p 9200:9200 \
+    -e "xpack.security.enabled=false" \
+    -e "xpack.security.transport.ssl.enabled=false" \
+    -e "discovery.type=single-node" \
+    docker.elastic.co/elasticsearch/elasticsearch:8.10.0
   
 *Start Ollama (AI Engine):*
 
