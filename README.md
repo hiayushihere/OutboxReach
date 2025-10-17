@@ -101,48 +101,56 @@ Automatically triggers notifications for “Interested” emails:
 ---
 
 
-### Setup Instructions
-Step 1: Prerequisites
+## Setup Instructions
+### Step 1: Prerequisites
 Install the following before proceeding:
 Node.js
 Docker
 Ollama
+
+
 Clone the repository and install dependencies:
 git clone https://github.com/hiayushihere/OutboxReach
 cd OutboxReach
 npm install
-Step 2: Configure Environment Variables
+
+
+### Step 2: Configure Environment Variables
 Create a .env file in the root directory and add the following:
-# IMAP Credentials (App Passwords recommended)
+*IMAP Credentials (App Passwords recommended)*
 EMAIL_1_USER=youremail1@example.com
 EMAIL_1_PASSWORD=yourapppassword1
 EMAIL_2_USER=youremail2@example.com
-EMAIL_2_PASSWORD=yourapppassword2
+EMAIL_2_PASSWORD=yourapppassword2 
 
-# Backend Services
+*Backend Services*
 ELASTIC_HOST=http://localhost:9200
 OLLAMA_HOST=http://localhost:11434
 
-# Notification Webhooks
+*Notification Webhooks*
 SLACK_WEBHOOK_URL=https://hooks.slack.com/...
 GENERIC_WEBHOOK_URL=https://yourwebhook.url
-Step 3: Start Core Services
-Start Elasticsearch (Data Store):
+
+
+### Step 3: Start Core Services
+*Start Elasticsearch (Data Store):*
+
 docker run -d --name elasticsearch \
   -p 9200:9200 \
   -e "discovery.type=single-node" \
   -e "ES_JAVA_OPTS=-Xms512m -Xmx512m" \
-  docker.elastic.co/elasticsearch/elasticsearch:7.17.0
-Start Ollama (AI Engine):
+  docker.elastic.co/elasticsearch/elasticsearch:8.10.0
+  
+*Start Ollama (AI Engine):*
+
 ollama serve
 ollama pull phi3
 ollama pull nomic-embed-text
-Step 4: Run the Application
-Start the backend API:
-npm run dev
-The backend runs on:
-http://localhost:3001
-Open the frontend:
+
+### Step 4: Run the Application
+*Start the backend API:*
+npm run dev #The backend runs on: http://localhost:3001
+*Open the frontend:*
 Open the index.html file in your browser to access the dashboard.
 
 
