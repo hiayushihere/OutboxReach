@@ -136,15 +136,11 @@ Create a .env file in the root directory and add the following:
 *Start Elasticsearch (Data Store):*
 
 `docker run -d --name elasticsearch \`
-
     `-p 9200:9200 \`
     
    ` -e "xpack.security.enabled=false" \`
-   
     `-e "xpack.security.transport.ssl.enabled=false" \`
-
     `-e "discovery.type=single-node" \`
-    
     `docker.elastic.co/elasticsearch/elasticsearch:8.10.0`
     
   
